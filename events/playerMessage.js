@@ -9,7 +9,7 @@ const prism = require('prism-media');
 let longResource;
 
 module.exports = {
-	name: Events.MessageCreate,
+    name: Events.MessageCreate,
     isMatch(msg) {
 
         if (msg.author.bot) return;
@@ -20,7 +20,7 @@ module.exports = {
             return msgMatch || chanMatch;
         }
     },
-	execute(msg) {
+    execute(msg) {
         if (msg.content.toLowerCase() === '!talk') {
 
             if (msg.member.voice.channel) {

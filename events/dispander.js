@@ -13,6 +13,8 @@ buildEmbeds = (origMsg) => {
     if (origMsg.embeds.length) {
         for (var ei=0; ei < origMsg.embeds.length; ei++) {
 
+            //console.log(origMsg.embeds[ei]);
+
             let anEmbed = new EmbedBuilder()
                 .setDescription(origMsg.content)
                 .setTimestamp(origMsg.createdAt)
@@ -95,6 +97,7 @@ module.exports = {
                     theChan.send({ embeds: buildEmbeds(msg), ...dispandedMsg });
                 }
             }
+
         }
     }
 };
